@@ -1,6 +1,7 @@
 package de.claudioaltamura.java.junit5;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +12,12 @@ class HelloWorldTest {
 	void testHello() {
 		HelloWorld helloWorld = new HelloWorld();
 		assertEquals("Hello World!", helloWorld.hello());
+	}
+	
+	@Test
+	@Disabled
+	void testDisable() {
+	  System.out.println("test is disabled");
 	}
 
 }
