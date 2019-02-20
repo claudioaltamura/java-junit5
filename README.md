@@ -10,5 +10,7 @@ junit5 examples
 3. @Test, @DispalyName
 4. @RepeatedTest
 5. @ParameterizedTest
+6. @Disabled
+7. assertAll
 
 see https://junit.org/junit5/docs/current/user-guide/
