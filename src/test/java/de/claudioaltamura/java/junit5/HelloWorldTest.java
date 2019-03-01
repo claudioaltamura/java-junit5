@@ -7,17 +7,17 @@ import org.junit.jupiter.api.Test;
 
 class HelloWorldTest {
 
-	@Test
-	@DisplayName("test hello")
-	void testHello() {
-		HelloWorld helloWorld = new HelloWorld();
-		assertEquals("Hello World!", helloWorld.hello());
-	}
-	
-	@Test
-	@Disabled
-	void testDisable() {
-	  System.out.println("test is disabled");
-	}
+  @Test
+  @DisplayName("test hello")
+  void testHello() {
+    HelloWorld helloWorld = new HelloWorld();
+    assertEquals("Hello World!", helloWorld.hello());
+  }
+
+  @Test
+  @Disabled
+  void testDisable() {
+    System.out.println("test is disabled");
+  }
 
 }

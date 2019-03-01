@@ -10,26 +10,26 @@ import org.junit.jupiter.params.provider.ValueSource;
 class ParameterTest {
 
   private Inverter inverter;
-  
+
   @BeforeEach
   void beforeEach() {
     inverter = new Inverter("Hello", "World");
   }
-  
-  @ParameterizedTest    
+
+  @ParameterizedTest
   @ValueSource(strings = {"olleH", "dlroW"})
   void isInverted(String input) {
     assertTrue(inverter.isInverted(input));
   }
-  
-  @ParameterizedTest    
+
+  @ParameterizedTest
   @MethodSource("notInverted")
   void isNotInverted(String input) {
-      assertFalse(inverter.isInverted(input));
+    assertFalse(inverter.isInverted(input));
   }
 
   static String[] notInverted() {
-      return new String[] {"Hello", "World"};
+    return new String[] {"Hello", "World"};
   }
-  
+
 }
