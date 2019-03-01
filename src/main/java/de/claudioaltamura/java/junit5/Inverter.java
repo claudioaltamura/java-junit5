@@ -18,4 +18,8 @@ public class Inverter {
     return false;
   }
 
+  public int badMethod(int i) {
+    throw new RuntimeException();
+  }
+
 }
