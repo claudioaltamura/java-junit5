@@ -22,7 +22,7 @@ class AssertionsTest {
     Inverter inverter = new Inverter();
     Exception exception = assertThrows(RuntimeException.class, () ->
     inverter.badMethod(42));
-    assertEquals("/ by zero", exception.getMessage());
+    assertEquals("bad method", exception.getMessage());
   }
 
 }

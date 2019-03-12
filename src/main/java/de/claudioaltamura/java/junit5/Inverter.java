@@ -19,7 +19,7 @@ public class Inverter {
   }
 
   public int badMethod(int i) {
-    throw new RuntimeException();
+    throw new RuntimeException("bad method");
   }
 
 }
