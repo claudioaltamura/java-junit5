@@ -12,5 +12,6 @@ junit5 examples
 5. @ParameterizedTest
 6. @Disabled
 7. assertAll
+8. assertThrows
 
 see https://junit.org/junit5/docs/current/user-guide/
