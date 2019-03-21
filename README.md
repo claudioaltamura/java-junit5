@@ -13,5 +13,6 @@ junit5 examples
 6. @Disabled
 7. assertAll
 8. assertThrows
+9. assertTimeout
 
 see https://junit.org/junit5/docs/current/user-guide/
