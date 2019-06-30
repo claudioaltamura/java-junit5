@@ -1,11 +1,14 @@
 package de.claudioaltamura.java.junit5;
 
+import static java.time.Duration.ofMillis;
 import static java.time.Duration.ofMinutes;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTimeout;
+import static org.junit.jupiter.api.Assertions.assertTimeoutPreemptively;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 class AssertionsTest {
@@ -40,17 +43,19 @@ class AssertionsTest {
   }
 
   @Test
+  @Disabled
   void timeoutExceeded() {
-//    assertTimeout(ofMillis(10), () -> {
-//      Thread.sleep(100);
-//    });
+    assertTimeout(ofMillis(10), () -> {
+      Thread.sleep(100);
+    });
   }
 
   @Test
+  @Disabled
   void timeoutExceededWithPreemptiveTermination() {
-//    assertTimeoutPreemptively(ofMillis(10), () -> {
-//      Thread.sleep(100);
-//    });
+    assertTimeoutPreemptively(ofMillis(10), () -> {
+      Thread.sleep(100);
+    });
   }
 
 }
