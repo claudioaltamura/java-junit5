@@ -14,5 +14,6 @@ junit5 examples
 7. assertAll
 8. assertThrows
 9. assertTimeout
+10.assumptions
 
 see https://junit.org/junit5/docs/current/user-guide/
