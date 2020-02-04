@@ -14,8 +14,8 @@ dependencies {
 
 test {
   useJUnitPlatform{
-    includeTags 'example1'
-    excludeTags 'example2'
+    //includeTags 'example1'
+    //excludeTags 'example2'
   }
 
   task example2Test(type: Test) {
