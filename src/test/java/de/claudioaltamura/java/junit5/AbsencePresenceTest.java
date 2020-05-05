@@ -17,7 +17,7 @@ class AbsencePresenceTest {
 
   @Test
   void assertExecutableDoNotThrowExceptions() {
-    assertAll(() -> assertEquals("Hallo", new Message("Hello").getMessage()));
+    assertAll(() -> assertEquals("Hello", new Message("Hello").getMessage()));
   }
 
   @Test
