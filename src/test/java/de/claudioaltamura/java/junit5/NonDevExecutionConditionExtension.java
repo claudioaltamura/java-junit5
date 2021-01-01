@@ -9,7 +9,7 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 
 public class NonDevExecutionConditionExtension implements ExecutionCondition {
 
-	private static String propertyFilePath = System.getProperty("user.dir")+
+	private static final String propertyFilePath = System.getProperty("user.dir")+
 		"/src/test/resources/condition.properties";
 
 	@Override
