@@ -6,21 +6,19 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-
 class TagExample2Test {
 
-	@Tag("example1")
-	@Test
-	@DisplayName("test hello")
-	void testHello() {
-		HelloWorld helloWorld = new HelloWorld();
-		assertEquals("Hello World!", helloWorld.hello());
-	}
+  @Tag("example1")
+  @Test
+  @DisplayName("test hello")
+  void testHello() {
+    HelloWorld helloWorld = new HelloWorld();
+    assertEquals("Hello World!", helloWorld.hello());
+  }
 
-	@Test
-	@Tag("example2")
-	void testDisable() {
-		System.out.println("test is disabled");
-	}
-
+  @Test
+  @Tag("example2")
+  void testDisable() {
+    System.out.println("test is disabled");
+  }
 }

@@ -6,33 +6,33 @@ import org.junit.jupiter.api.extension.ExtendWith;
 @ExtendWith(TestLifeCycleExtensions.class)
 class TestLifeCycleExtensionTest {
 
-	@BeforeAll
-	static void beforeAll() {
-		System.out.println("beforeAll()");
-	}
+  @BeforeAll
+  static void beforeAll() {
+    System.out.println("beforeAll()");
+  }
 
-	@BeforeEach
-	void beforeEach() {
-		System.out.println("beforeEach()");
-	}
+  @BeforeEach
+  void beforeEach() {
+    System.out.println("beforeEach()");
+  }
 
-	@Test
-	void firstTest() {
-		System.out.println("firstTest()");
-	}
+  @Test
+  void firstTest() {
+    System.out.println("firstTest()");
+  }
 
-	@Test
-	void secondTest() {
-		System.out.println("secondTest()");
-	}
+  @Test
+  void secondTest() {
+    System.out.println("secondTest()");
+  }
 
-	@AfterEach
-	void afterEach() {
-		System.out.println("afterEach()");
-	}
+  @AfterEach
+  void afterEach() {
+    System.out.println("afterEach()");
+  }
 
-	@AfterAll
-	static void afterAll() {
-		System.out.println("afterAll()");
-	}
+  @AfterAll
+  static void afterAll() {
+    System.out.println("afterAll()");
+  }
 }

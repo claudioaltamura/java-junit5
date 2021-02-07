@@ -7,11 +7,11 @@ public class Inverter {
   public Inverter(String... correctWords) {
     this.correctWords = correctWords;
   }
-  
+
   public boolean isInverted(String invertedWord) {
-    for(String word : correctWords) {
+    for (String word : correctWords) {
       String tmp = new StringBuilder(invertedWord).reverse().toString();
-      if(word.equals(tmp)) {
+      if (word.equals(tmp)) {
         return true;
       }
     }
@@ -21,5 +21,4 @@ public class Inverter {
   public int badMethod(int i) {
     throw new RuntimeException("bad method");
   }
-
 }

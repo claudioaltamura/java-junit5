@@ -9,27 +9,24 @@ import org.junit.jupiter.api.extension.ExtensionContext;
 
 public class NonDevExecutionConditionExtension implements ExecutionCondition {
 
-	private static final String propertyFilePath = System.getProperty("user.dir")+
-		"/src/test/resources/condition.properties";
+  private static final String propertyFilePath =
+      System.getProperty("user.dir") + "/src/test/resources/condition.properties";
 
-	@Override
-	public ConditionEvaluationResult evaluateExecutionCondition(
-		ExtensionContext context)  {
+  @Override
+  public ConditionEvaluationResult evaluateExecutionCondition(ExtensionContext context) {
 
-		Properties prop = new Properties();
-		try {
-			prop.load(new FileInputStream(propertyFilePath));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+    Properties prop = new Properties();
+    try {
+      prop.load(new FileInputStream(propertyFilePath));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
 
-		String environment = prop.getProperty("environment");
-		if (environment.equals("DEV")) {
-			return ConditionEvaluationResult.disabled("Test disabled on DEV environment.");
-		}
+    String environment = prop.getProperty("environment");
+    if (environment.equals("DEV")) {
+      return ConditionEvaluationResult.disabled("Test disabled on DEV environment.");
+    }
 
-		return ConditionEvaluationResult.enabled(
-			"Test enabled on TEST environment");
-	}
-
+    return ConditionEvaluationResult.enabled("Test enabled on TEST environment");
+  }
 }

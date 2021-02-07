@@ -1,9 +1,9 @@
 package de.claudioaltamura.java.junit5;
 
 public class Message {
-  
+
   private String message;
-  
+
   public Message(String message) {
     this.message = message;
   }
@@ -16,5 +16,4 @@ public class Message {
   public String toString() {
     return "Message [message=" + message + "]";
   }
-  
 }
