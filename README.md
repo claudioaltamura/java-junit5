@@ -16,7 +16,8 @@
 9. assertTimeout
 10. assumptions
 11. @Tag
-12. conditional test execution
+12. test life cycle
+13. conditional test execution
 
 see https://junit.org/junit5/docs/current/user-guide/
 

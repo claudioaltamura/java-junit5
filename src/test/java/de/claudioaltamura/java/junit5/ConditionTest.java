@@ -3,6 +3,7 @@ package de.claudioaltamura.java.junit5;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledIf;
 import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable;
 import org.junit.jupiter.api.condition.EnabledIfSystemProperty;
 import org.junit.jupiter.api.condition.EnabledOnOs;
@@ -13,18 +14,18 @@ class ConditionTest {
   @Test
   @EnabledIfSystemProperty(named = "my.property", matches = "yes")
   void onlyIfMyPropertyMatchesYes() {
-    System.out.println("yes");
+	  assertTrue(true);
   }
 
   @Test
   @DisabledIfEnvironmentVariable(named = "my.property", matches = "no")
   void disableIfMyPropertyMatchesNo() {
-    System.out.println("my.property != no");
+	  assertTrue(true);
   }
 
   @Test
   void test() {
-    System.out.println("running every time");
+	  assertTrue(true);
   }
 
   @Test
@@ -32,4 +33,10 @@ class ConditionTest {
   void shouldRunBothLinuxAndMac() {
     assertTrue(true);
   }
+
+  @YesAndMacCondition
+  void shouldRunWhenYesAndMac() {
+    assertTrue(true);
+  }
+
 }
