@@ -42,37 +42,38 @@ class NestedTest {
     void throwsExceptionWhenPeeked() {
       assertThrows(EmptyStackException.class, stack::peek);
     }
+  }
 
-    @Nested
-    @DisplayName("after pushing an element")
-    class AfterPushing {
+  @Nested
+  @DisplayName("after pushing an element")
+  class AfterPushing {
 
-      String anElement = "an element";
+    String anElement = "an element";
 
-      @BeforeEach
-      void pushAnElement() {
-        stack.push(anElement);
-      }
+    @BeforeEach
+    void pushAnElement() {
+      stack = new Stack<>();
+      stack.push(anElement);
+    }
 
-      @Test
-      @DisplayName("it is no longer empty")
-      void isNotEmpty() {
-        assertFalse(stack.isEmpty());
-      }
+    @Test
+    @DisplayName("it is no longer empty")
+    void isNotEmpty() {
+      assertFalse(stack.isEmpty());
+    }
 
-      @Test
-      @DisplayName("returns the element when popped and is empty")
-      void returnElementWhenPopped() {
-        assertEquals(anElement, stack.pop());
-        assertTrue(stack.isEmpty());
-      }
+    @Test
+    @DisplayName("returns the element when popped and is empty")
+    void returnElementWhenPopped() {
+      assertEquals(anElement, stack.pop());
+      assertTrue(stack.isEmpty());
+    }
 
-      @Test
-      @DisplayName("returns the element when peeked but remains not empty")
-      void returnElementWhenPeeked() {
-        assertEquals(anElement, stack.peek());
-        assertFalse(stack.isEmpty());
-      }
+    @Test
+    @DisplayName("returns the element when peeked but remains not empty")
+    void returnElementWhenPeeked() {
+      assertEquals(anElement, stack.peek());
+      assertFalse(stack.isEmpty());
     }
   }
 }
