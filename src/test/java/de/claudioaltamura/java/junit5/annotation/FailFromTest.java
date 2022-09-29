@@ -4,10 +4,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@FailFrom(date="2022-01-01", reason = "Please refactor the code as agreed upon!")
 public class FailFromTest {
+
     @Test
-    void test() {
+    @FailFrom(date="2022-01-01", reason = "Please refactor the code as agreed upon!")
+    void failFrom() {
         assertTrue(true);
     }
+
+    @Test
+    void secondTest() {
+        assertTrue(true);
+    }
+
 }
