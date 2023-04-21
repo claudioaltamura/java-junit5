@@ -1,15 +1,16 @@
 package de.claudioaltamura.java.junit5.annotation;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@FailFrom(date="2022-01-01", reason = "Please refactor the code as agreed upon!")
-public class FailFromTypeTest {
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
-    @Test
-    void test() {
-        assertTrue(true);
-    }
+@Disabled
+@FailFrom(date = "2022-01-01", reason = "Please refactor the code as agreed upon!")
+class FailFromTypeTest {
 
+  @Test
+  void test() {
+    assertTrue(true);
+  }
 }

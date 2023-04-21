@@ -4,7 +4,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-/** @see <a href="https://stackoverflow.com/a/51768474">test exceptions with JUnit 5</a> */
+/**
+ * @see <a href="https://stackoverflow.com/a/51768474">test exceptions with JUnit 5</a>
+ */
 class ExceptionTest {
 
   @Test
