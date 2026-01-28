@@ -2,8 +2,8 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 
 plugins {
     java
-    id("com.diffplug.spotless") version "7.0.2"
-    id("com.github.ben-manes.versions") version "0.52.0"
+    id("com.diffplug.spotless") version "8.2.1"
+    id("com.github.ben-manes.versions") version "0.53.0"
 }
 
 repositories {
@@ -11,15 +11,15 @@ repositories {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 dependencies {
-    implementation("org.junit.jupiter:junit-jupiter-api:5.11.0")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:5.11.0")
-
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.11.0")
+    implementation("org.junit.jupiter:junit-jupiter-api:5.14.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.14.2")
+    testImplementation("org.junit.platform:junit-platform-launcher:1.14.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.14.2")
 }
 
 spotless {
